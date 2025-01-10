@@ -18,7 +18,7 @@ async function SearchPokemon() {
         pokemonDetails.forEach(p => {
             const pokemon = new Pokemon();
             pokemon.name = p.name;
-            pokemon.number = p.order;
+            pokemon.number = p.id;
             pokemon.img = p.sprites.other['official-artwork'].front_default;
             pokemon.type = p.types.map(t => t.type.name);
             listPokemon.push(pokemon);
@@ -31,12 +31,15 @@ async function SearchPokemon() {
     }
 }
 
+let off = 0
 // Função para exibir os Pokémon na tela
-function LoadPokemon(limit = 8) {
+function LoadPokemon() {
+    let limit = 8;
     const box = document.getElementById('container');
-    box.innerHTML = ""; // Limpa o container antes de carregar
-    const toDisplay = listPokemon.slice(0, limit); // Carrega apenas um número limitado
+    // Limpa o container antes de carregar
+    const toDisplay = listPokemon.slice(off, off + limit); // Carrega apenas um número limitado
     toDisplay.forEach(pokemon => CreateCard(pokemon));
+    off += limit;
 }
 
 // Função para buscar Pokémon pelo nome
@@ -61,6 +64,7 @@ function CreateCard(pokemon) {
     box.innerHTML += `
         <div class="cardpokemon">
             <div class="card-upper">
+                <span class="numberCard">${pokemon.number}</span>
                 <div id="bola" class="${pokemon.type[0]}"></div>
                 <img src="${pokemon.img}" alt="${pokemon.name}">
             </div>
@@ -74,7 +78,9 @@ function CreateCard(pokemon) {
 }
 
 // Event Listener para o botão de busca
-document.getElementById('btn').addEventListener('click', SearchPokemonByName());
+document.getElementById('btn').addEventListener('click', SearchPokemonByName);
+// Event listener para o botao de carregar
+document.getElementById('loadBtn').addEventListener('click', LoadPokemon);
 
 // Inicializa a busca ao carregar a página
 SearchPokemon();

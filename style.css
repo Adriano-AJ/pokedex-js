@@ -19,6 +19,11 @@ img{
     z-index: 2;
     opacity: 1;
 }
+.numberCard{
+    position: relative;
+    z-index: 1;
+    float: right;
+}
 #bola{
     border-radius: 100%;
     position: absolute;
@@ -66,11 +71,24 @@ section{
 }
 #container-box{
     max-width: 1024px;
-    
 }
 #loadBtn{
     display: flex;
     justify-self: center;
+    width: 300px;
+    padding: 10px;
+    font-size: medium;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    transition: .3s;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#loadBtn:hover{
+    transform: scale(1.01);
 }
 #container{
     display: flex;
@@ -95,7 +113,7 @@ ul li{
     text-transform: uppercase;
     font-weight: 600;
     text-align: center;
-    width: 100%;
+   
     
 }
 #textbox{
@@ -106,6 +124,7 @@ ul li{
     width: 300px;
     padding: 5px;
     border: 1px solid lightgray;
+    
 }
 #btn{
     padding: 4px 32px;
@@ -123,39 +142,74 @@ ul li{
     color: #e3350d;
     background-color: rgb(255, 255, 255);
 }
-.grass{
-    background-color: rgb(120, 200, 80);
+.grass {
+    background-color: rgb(120, 200, 80); /* Verde claro */
 }
-.poison{
-    background-color: rgb(160, 64, 160);
+
+.poison {
+    background-color: rgb(160, 64, 160); /* Roxo */
 }
-.psichic{
-    background-color: rgb(71, 95, 87);
+
+.psychic {
+    background-color: rgb(255, 105, 180); /* Rosa */
 }
-.water{
-    background-color: rgb(104, 144, 240);
+
+.water {
+    background-color: rgb(104, 144, 240); /* Azul */
 }
-.rock{
-    background-color: rgb(71, 95, 87);
+
+.rock {
+    background-color: rgb(184, 134, 11); /* Marrom amarelado */
 }
-.ice{
-    background-color: aqua;
+
+.ice {
+    background-color: rgb(173, 216, 230); /* Azul claro */
 }
-.steel{
-    background-color: bisque;
+
+.steel {
+    background-color: rgb(169, 169, 169); /* Cinza */
 }
-.dragon{
-    background-color: black;
+
+.dragon {
+    background-color: rgb(0, 0, 139); /* Azul escuro */
 }
-.fire{
-    background-color: rgb(240, 128, 48);
+
+.fire {
+    background-color: rgb(240, 128, 48); /* Laranja */
 }
-.bug{
-    background-color: rgb(168, 184, 32);
+
+.bug {
+    background-color: rgb(168, 184, 32); /* Verde limão */
 }
-.normal{
-    background-color: rgb(196, 196, 164);
+
+.normal {
+    background-color: rgb(196, 196, 164); /* Cinza claro */
 }
-.electric{
-    background-color: rgb(248, 208, 48);
+
+.electric {
+    background-color: rgb(248, 208, 48); /* Amarelo */
+}
+
+.fighting {
+    background-color: rgb(192, 48, 40); /* Vermelho escuro */
+}
+
+.flying {
+    background-color: rgb(135, 206, 235); /* Azul claro */
+}
+
+.ghost {
+    background-color: rgb(96, 96, 255); /* Roxo claro */
+}
+
+.ground {
+    background-color: rgb(255, 221, 51); /* Amarelo dourado */
+}
+
+.dark {
+    background-color: rgb(112, 112, 112); /* Cinza escuro */
+}
+
+.fairy {
+    background-color: rgb(255, 182, 193); /* Rosa claro */
 }

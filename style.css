@@ -47,10 +47,12 @@ img{
     width: 300px;
     transition: .3s;
     cursor: pointer;
+    padding: 10px;
 }
 .cardpokemon:hover{
     transform: translateY(-5px);
 }
+
 .titleCard{
     font-size: 30px;
     font-weight: 500;
@@ -64,6 +66,11 @@ section{
 }
 #container-box{
     max-width: 1024px;
+    
+}
+#loadBtn{
+    display: flex;
+    justify-self: center;
 }
 #container{
     display: flex;
@@ -78,6 +85,8 @@ section{
 }
 ul{
     list-style: none;
+    display: flex;
+    gap: 10px;
 }
 ul li{
     color: #ffffff;
@@ -85,6 +94,9 @@ ul li{
     border-radius: 10px;
     text-transform: uppercase;
     font-weight: 600;
+    text-align: center;
+    width: 100%;
+    
 }
 #textbox{
     border-radius: 5px;
